@@ -1,0 +1,11 @@
+{
+  "name": "cordova-plugin-shutdown",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-shutdown",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "Catch a Shutdown Event"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="shutdown-catcher"
+    version="1.0.0">
+    <name>Shutdown Catcher</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
+    <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.ShutdownCatcher -->
+        <clobbers target="ShutdownCatcher" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="ShutdownCatcher">
+          <param name="android-package" value="com.tonykunda.ShutdownCatcher" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/tonykunda/ShutdownCatcher.java" target-dir="src/com/tonykunda/" />
+    </platform>
+</plugin>
